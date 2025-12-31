@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #0a0a2a, #1a1a4a);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 10;
+            padding: 20px;
+            max-width: 1000px;
+        }
+        
+        .year-2026 {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(to right, #ff0080, #ff8c00, #40e0d0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+            to { text-shadow: 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 0, 128, 0.4); }
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #ffde59;
+            text-shadow: 0 0 10px rgba(255, 222, 89, 0.7);
+        }
+        
+        .cartoon-container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 0 auto 30px;
+        }
+        
+        .cartoon {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 350px;
+            background-color: #ffde59;
+            border-radius: 50% 50% 45% 45%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        
+        .face {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 200px;
+            background-color: #ffeaa7;
+            border-radius: 45%;
+        }
+        
+        .eye {
+            position: absolute;
+            top: 50px;
+            width: 30px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        
+        .eye-left {
+            left: 40px;
+        }
+        
+        .eye-right {
+            right: 40px;
+        }
+        
+        .mouth {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 30px;
+            background-color: #ff7675;
+            border-radius: 0 0 40px 40px;
+            animation: talk 0.5s infinite alternate;
+        }
+        
+        @keyframes talk {
+            0% { height: 30px; }
+            100% { height: 40px; }
+        }
+        
+        .hat {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 80px;
+            background-color: #ff3838;
+            border-radius: 50% 50% 0 0;
+            z-index: 3;
+        }
+        
+        .hat-top {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background-color: #ff3838;
+            border-radius: 50%;
+        }
+        
+        .message-box {
+            position: absolute;
+            top: 0;
+            right: -280px;
+            width: 260px;
+            background-color: white;
+            color: #333;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        .message-box:after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right-color: white;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        
+        .signature {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ff3838;
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        .theme-2026 {
+            font-size: 1.8rem;
+            margin: 30px 0;
+            color: #40e0d0;
+            font-weight: 600;
+        }
+        
+        .theme-description {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #ffde59;
+        }
+        
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .firework-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+        }
+        
+        .firework-particle.trail {
+            width: 2px;
+            height: 2px;
+            opacity: 0.7;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 100px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .countdown-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffde59;
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            color: #aaa;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+        
+        .sound-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .sound-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sound-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+        
+        .firework-intensity {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .firework-intensity label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .firework-intensity select {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 15px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .year-2026 {
+                font-size: 5rem;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .cartoon-container {
+                width: 250px;
+                height: 350px;
+            }
+            
+            .cartoon {
+                width: 230px;
+                height: 300px;
+            }
+            
+            .message-box {
+                position: relative;
+                right: 0;
+                top: 20px;
+                margin: 20px auto;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+            }
+            
+            .sound-controls {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .firework-intensity {
+                bottom: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Happy New Year</h1>
+        <div class="year-2026">2026</div>
+        
+        <div class="theme-2026">Theme: A New Era of Hope & Innovation</div>
+        
+        <div class="cartoon-container">
+            <div class="cartoon">
+                <div class="face">
+                    <div class="eye eye-left"></div>
+                    <div class="eye eye-right"></div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="hat">
+                    <div class="hat-top"></div>
+                </div>
+            </div>
+            <div class="message-box">
+                <div class="message">"I wish you a Happy New Year. God bless you."</div>
+                <div class="signature">- Gene Mark</div>
+            </div>
+        </div>
+        
+        <div class="theme-description">
+            <p>As we welcome 2026, let's embrace new opportunities, cherish our loved ones, and work towards a brighter future. May this year bring you joy, success, and fulfillment in all your endeavors.</p>
+            <p style="margin-top: 10px;">The year 2026 represents innovation, growth, and unity. Let's make it our best year yet!</p>
+        </div>
+        
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-value" id="days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Wishing you and your family a prosperous and joyful New Year 2026!</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;"> Created by Gene Mark</p>
+        </div>
+    </div>
+
+    <div class="sound-controls">
+        <button class="sound-btn" id="musicToggle">
+            <i class="fas fa-music"></i>
+        </button>
+        <button class="sound-btn" id="soundToggle">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+    
+    <div class="firework-intensity">
+        <label for="fireworkLevel">Firework Intensity:</label>
+        <select id="fireworkLevel">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+            <option value="extreme">Extreme</option>
+        </select>
+    </div>
+
+    <script>
+        // Audio Context for sound effects
+        let audioContext;
+        let musicEnabled = true;
+        let soundEnabled = true;
+        let fireworkIntensity = 'medium';
+        
+        // Initialize audio context on user interaction
+        function initAudio() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+        
+        // Sound effects using Web Audio API
+        function playFireworkSound(type = 'explosion') {
+            if (!soundEnabled || !audioContext) return;
+            
+            try {
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                if (type === 'explosion') {
+                    oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+                    oscillator.frequency.exponentialRampToValueAtTime(50, audioContext.currentTime + 0.5);
+                    oscillator.type = 'sawtooth';
+                    
+                    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                    
+                    oscillator.start();
+                    oscillator.stop(audioContext.currentTime + 0.5);
+                } else if (type === 'launch') {
+                    oscillator.frequency.setValueAtTime(50, audioContext.currentTime);
+                    oscillator.frequency.exponentialRampToValueAtTime(300, audioContext.currentTime + 0.3);
+                    oscillator.type = 'sine';
+                    
+                    gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                    
+                    oscillator.start();
+                    oscillator.stop(audioContext.currentTime + 0.3);
+                } else if (type === 'crackle') {
+                    // Create crackle effect with noise
+                    const bufferSize = audioContext.sampleRate * 0.5;
+                    const buffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
+                    const output = buffer.getChannelData(0);
+                    
+                    for (let i = 0; i < bufferSize; i++) {
+                        output[i] = Math.random() * 2 - 1;
+                    }
+                    
+                    const noise = audioContext.createBufferSource();
+                    noise.buffer = buffer;
+                    
+                    const noiseGain = audioContext.createGain();
+                    noise.connect(noiseGain);
+                    noiseGain.connect(audioContext.destination);
+                    
+                    noiseGain.gain.setValueAtTime(0.1, audioContext.currentTime);
+                    noiseGain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+                    
+                    noise.start();
+                    noise.stop(audioContext.currentTime + 0.4);
+                }
+            } catch (e) {
+                console.log("Audio error:", e);
+            }
+        }
+        
+        // Play background music (simulated with tones)
+        function playBackgroundMusic() {
+            if (!musicEnabled || !audioContext) return;
+            
+            try {
+                // Create a simple festive melody
+                const notes = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50];
+                let currentNote = 0;
+                
+                function playNextNote() {
+                    if (!musicEnabled) return;
+                    
+                    const oscillator = audioContext.createOscillator();
+                    const gainNode = audioContext.createGain();
+                    
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+                    
+                    oscillator.frequency.setValueAtTime(notes[currentNote], audioContext.currentTime);
+                    oscillator.type = 'sine';
+                    
+                    gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                    
+                    oscillator.start();
+                    oscillator.stop(audioContext.currentTime + 0.5);
+                    
+                    currentNote = (currentNote + 1) % notes.length;
+                    
+                    // Schedule next note
+                    setTimeout(playNextNote, 600);
+                }
+                
+                // Start the music
+                playNextNote();
+            } catch (e) {
+                console.log("Music error:", e);
+            }
+        }
+        
+        // Create fireworks on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize audio on first user interaction
+            document.body.addEventListener('click', function initAudioOnClick() {
+                initAudio();
+                if (musicEnabled) {
+                    playBackgroundMusic();
+                }
+                document.body.removeEventListener('click', initAudioOnClick);
+            });
+            
+            // Create initial fireworks explosion
+            createFireworks();
+            
+            // Update countdown every second
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+            
+            // Set up firework intensity selector
+            document.getElementById('fireworkLevel').addEventListener('change', function() {
+                fireworkIntensity = this.value;
+            });
+            
+            // Set up sound controls
+            document.getElementById('musicToggle').addEventListener('click', function() {
+                musicEnabled = !musicEnabled;
+                this.innerHTML = musicEnabled ? '<i class="fas fa-music"></i>' : '<i class="fas fa-music-slash"></i>';
+                if (musicEnabled && audioContext) {
+                    playBackgroundMusic();
+                }
+            });
+            
+            document.getElementById('soundToggle').addEventListener('click', function() {
+                soundEnabled = !soundEnabled;
+                this.innerHTML = soundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
+            });
+        });
+        
+        // Create initial fireworks explosion
+        function createFireworks() {
+            // Create multiple firework bursts based on intensity
+            let fireworkCount;
+            switch(fireworkIntensity) {
+                case 'low': fireworkCount = 10; break;
+                case 'medium': fireworkCount = 25; break;
+                case 'high': fireworkCount = 40; break;
+                case 'extreme': fireworkCount = 60; break;
+                default: fireworkCount = 25;
+            }
+            
+            for (let i = 0; i < fireworkCount; i++) {
+                setTimeout(() => {
+                    createFireworkBurst();
+                }, i * 150);
+            }
+            
+            // Start continuous fireworks based on intensity
+            let intervalTime;
+            switch(fireworkIntensity) {
+                case 'low': intervalTime = 5000; break;
+                case 'medium': intervalTime = 2000; break;
+                case 'high': intervalTime = 1000; break;
+                case 'extreme': intervalTime = 500; break;
+                default: intervalTime = 2000;
+            }
+            
+            // Clear any existing interval
+            if (window.fireworkInterval) {
+                clearInterval(window.fireworkInterval);
+            }
+            
+            // Set new interval
+            window.fireworkInterval = setInterval(() => {
+                createFireworkBurst();
+                if (fireworkIntensity === 'high' || fireworkIntensity === 'extreme') {
+                    // Create multiple bursts for high intensity
+                    setTimeout(() => createFireworkBurst(), 300);
+                    if (fireworkIntensity === 'extreme') {
+                        setTimeout(() => createFireworkBurst(), 600);
+                    }
+                }
+            }, intervalTime);
+        }
+        
+        // Create a single firework burst
+        function createFireworkBurst() {
+            const colors = ['#ff0080', '#ff8c00', '#40e0d0', '#ffde59', '#ff3838', '#9b59b6', '#1abc9c', '#e74c3c'];
+            const body = document.body;
+            
+            // Random position for the burst
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * (window.innerHeight / 2);
+            
+            // Play launch sound
+            playFireworkSound('launch');
+            
+            // Create rising trail
+            createTrail(x, window.innerHeight, x, y);
+            
+            // Create the central firework
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            firework.style.left = `${x}px`;
+            firework.style.top = `${y}px`;
+            const mainColor = colors[Math.floor(Math.random() * colors.length)];
+            firework.style.backgroundColor = mainColor;
+            firework.style.boxShadow = `0 0 20px ${mainColor}`;
+            body.appendChild(firework);
+            
+            // Play explosion sound after a short delay
+            setTimeout(() => {
+                playFireworkSound('explosion');
+                playFireworkSound('crackle');
+            }, 300);
+            
+            // Create explosion particles based on intensity
+            let particleCount;
+            switch(fireworkIntensity) {
+                case 'low': particleCount = 30; break;
+                case 'medium': particleCount = 70; break;
+                case 'high': particleCount = 120; break;
+                case 'extreme': particleCount = 200; break;
+                default: particleCount = 70;
+            }
+            
+            // Create different types of particles
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'firework-particle';
+                
+                // Random direction and distance
+                const angle = Math.random() * Math.PI * 2;
+                let distance;
+                switch(fireworkIntensity) {
+                    case 'low': distance = 40 + Math.random() * 100; break;
+                    case 'medium': distance = 60 + Math.random() * 150; break;
+                    case 'high': distance = 80 + Math.random() * 200; break;
+                    case 'extreme': distance = 100 + Math.random() * 250; break;
+                    default: distance = 60 + Math.random() * 150;
+                }
+                
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+                particle.style.backgroundColor = color;
+                particle.style.boxShadow = `0 0 8px ${color}`;
+                
+                // Random size for variety
+                const size = 3 + Math.random() * 6;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                body.appendChild(particle);
+                
+                // Animate particle
+                const duration = 800 + Math.random() * 700;
+                const animation = particle.animate([
+                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                    { 
+                        transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`, 
+                        opacity: 0 
+                    }
+                ], {
+                    duration: duration,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.9, 0.1)'
+                });
+                
+                // Remove particle after animation
+                animation.onfinish = () => {
+                    particle.remove();
+                };
+            }
+            
+            // Remove central firework after animation
+            const fireworkAnimation = firework.animate([
+                { transform: 'scale(1)', opacity: 1 },
+                { transform: 'scale(3)', opacity: 0 }
+            ], {
+                duration: 1000,
+                easing: 'ease-out'
+            });
+            
+            fireworkAnimation.onfinish = () => {
+                firework.remove();
+            };
+        }
+        
+        // Create a trail for the firework launch
+        function createTrail(startX, startY, endX, endY) {
+            const body = document.body;
+            const trailCount = 15;
+            
+            for (let i = 0; i < trailCount; i++) {
+                const trail = document.createElement('div');
+                trail.className = 'firework-particle trail';
+                
+                // Position along the path
+                const progress = i / trailCount;
+                const x = startX + (endX - startX) * progress;
+                const y = startY + (endY - startY) * progress;
+                
+                trail.style.left = `${x}px`;
+                trail.style.top = `${y}px`;
+                trail.style.backgroundColor = '#ffffff';
+                body.appendChild(trail);
+                
+                // Animate trail fading out
+                const animation = trail.animate([
+                    { opacity: 0.7 },
+                    { opacity: 0 }
+                ], {
+                    duration: 500,
+                    delay: i * 30
+                });
+                
+                animation.onfinish = () => {
+                    trail.remove();
+                };
+            }
+        }
+        
+        // Update the countdown to New Year 2026
+        function updateCountdown() {
+            const now = new Date();
+            const newYear2026 = new Date('January 1, 2026 00:00:00');
+            const timeRemaining = newYear2026 - now;
+            
+            if (timeRemaining < 0) {
+                // If we're already in 2026
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Create some random fireworks on click
+        document.addEventListener('click', function(event) {
+            createFireworkBurstAt(event.clientX, event.clientY);
+        });
+        
+        function createFireworkBurstAt(x, y) {
+            const colors = ['#ff0080', '#ff8c00', '#40e0d0', '#ffde59', '#ff3838', '#9b59b6'];
+            const body = document.body;
+            
+            // Play launch sound
+            playFireworkSound('launch');
+            
+            // Create the central firework
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            firework.style.left = `${x}px`;
+            firework.style.top = `${y}px`;
+            firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            firework.style.boxShadow = `0 0 15px ${colors[Math.floor(Math.random() * colors.length)]}`;
+            body.appendChild(firework);
+            
+            // Play explosion sound after a short delay
+            setTimeout(() => {
+                playFireworkSound('explosion');
+            }, 200);
+            
+            // Create explosion particles
+            const particleCount = 50;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'firework-particle';
+                
+                // Random direction and distance
+                const angle = Math.random() * Math.PI * 2;
+                const distance = 40 + Math.random() * 120;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+                particle.style.backgroundColor = color;
+                particle.style.boxShadow = `0 0 6px ${color}`;
+                body.appendChild(particle);
+                
+                // Animate particle
+                const animation = particle.animate([
+                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                    { 
+                        transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`, 
+                        opacity: 0 
+                    }
+                ], {
+                    duration: 700 + Math.random() * 500,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.9, 0.1)'
+                });
+                
+                // Remove particle after animation
+                animation.onfinish = () => {
+                    particle.remove();
+                };
+            }
+            
+            // Remove central firework after animation
+            const fireworkAnimation = firework.animate([
+                { transform: 'scale(1)', opacity: 1 },
+                { transform: 'scale(2.5)', opacity: 0 }
+            ], {
+                duration: 800,
+                easing: 'ease-out'
+            });
+            
+            fireworkAnimation.onfinish = () => {
+                firework.remove();
+            };
+        }
+    </script>
+</body>
+</html>
